@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Farm Management Design System - Earth tones and agricultural theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Agricultural color palette */
+    --background: 42 15% 97%;
+    --foreground: 120 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 120 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 120 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Agricultural green primary */
+    --primary: 120 35% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 120 40% 20%;
+    
+    /* Warm earth secondary */
+    --secondary: 35 25% 85%;
+    --secondary-foreground: 120 15% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Muted earth tones */
+    --muted: 42 20% 92%;
+    --muted-foreground: 120 10% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Golden harvest accent */
+    --accent: 45 85% 65%;
+    --accent-foreground: 120 15% 15%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Natural borders and inputs */
+    --border: 42 25% 88%;
+    --input: 42 25% 88%;
+    --input-focus: 120 35% 25%;
+    --ring: 120 35% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success and error states */
+    --success: 120 50% 35%;
+    --success-foreground: 0 0% 98%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Farm-specific gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(120 40% 30%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(50 75% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(120 30% 35%) 50%, hsl(var(--accent)) 100%);
 
-    --radius: 0.5rem;
+    /* Shadows with earth tones */
+    --shadow-soft: 0 2px 10px hsl(120 20% 20% / 0.08);
+    --shadow-medium: 0 4px 20px hsl(120 20% 20% / 0.12);
+    --shadow-strong: 0 8px 30px hsl(120 20% 20% / 0.15);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -91,6 +110,39 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer components {
+  /* Farm-specific component styles */
+  .farm-card {
+    @apply bg-card border border-border rounded-lg shadow-soft p-6;
+  }
+  
+  .farm-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
   }
 }
 
