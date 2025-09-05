@@ -15,6 +15,7 @@ import { Inventory } from "./pages/dashboard/Inventory";
 import { Livestock } from "./pages/dashboard/Livestock";
 import { Reports } from "./pages/dashboard/Reports";
 import { FarmSetup } from "./pages/FarmSetup";
+import ProductsPage from "./pages/Products";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
               <Route path="sales" element={<Sales />} />
               <Route path="expenses" element={<Expenses />} />
               <Route path="inventory" element={<Inventory />} />
+              <Route path="products" element={<ProductsPage />} />
               <Route path="livestock" element={<Livestock />} />
               <Route path="reports" element={<Reports />} />
             </Route>

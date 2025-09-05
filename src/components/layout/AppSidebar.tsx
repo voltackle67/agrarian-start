@@ -7,7 +7,8 @@ import {
   Package, 
   Users, 
   BarChart3,
-  Sprout 
+  Sprout, 
+  Box
 } from 'lucide-react';
 import {
   Sidebar,
@@ -21,12 +22,14 @@ import {
   SidebarHeader,
   useSidebar,
 } from '@/components/ui/sidebar';
+import { Link } from "react-router-dom";
 
 const menuItems = [
   { title: 'Dashboard', url: '/dashboard', icon: Home },
   { title: 'Sales', url: '/dashboard/sales', icon: DollarSign },
   { title: 'Expenses', url: '/dashboard/expenses', icon: Minus },
   { title: 'Inventory', url: '/dashboard/inventory', icon: Package },
+  { title: 'Products', url: '/dashboard/products', icon: Box },
   { title: 'Livestock', url: '/dashboard/livestock', icon: Users },
   { title: 'Reports', url: '/dashboard/reports', icon: BarChart3 },
 ];
